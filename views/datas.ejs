@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>QuickBill</title>
+</head>
+
+<body>
+    <div class="table-data">
+        <h2>Data From QBBITEST</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>ID</th>
+                    <th>External ID</th>
+                    <th>Trans Type</th>
+                    <th>Hold</th>
+                    <th>Source ID</th>
+                    <th>Voucher Number</th>
+                    <th>Voucher Date</th>
+                    <th>Voucher Time</th>
+                    <th>Party Name</th>
+                    <th>Net Amount</th>
+                    <th>New Guid</th>
+                    <th>Flag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(quickData.length){ for(var i=0; i< quickData.length; i++) {%>
+                    <tr>
+                        <th scope="row">
+                            <%=i+1; %>
+                        </th>
+                        <td>
+                            <%=quickData[i].id%>
+                        </td>
+                        <td>
+                            <%=quickData[i].Externalid %>
+                        </td>
+                        <td>
+                            <%=quickData[i].TrnType %>
+                        </td>
+                        <td>
+                            <%=quickData[i].HOId %>
+                        </td>
+                        <td>
+                            <%=quickData[i].Sourceid %>
+                        </td>
+                        <td>
+                            <%=quickData[i].VoucherNumber %>
+                        </td>
+                        <td>
+                            <%=quickData[i].VoucherDate %>
+                        </td>
+                        <td>
+                            <%=quickData[i].VoucherTime %>
+                        </td>
+                        <td>
+                            <%=quickData[i].PartyName %>
+                        </td>
+                        <td>
+                            <%=quickData[i].NetAmount %>
+                        </td>
+                        <td>
+                            <%=quickData[i].NewGuid %>
+                        </td>
+                        <td>
+                            <%=quickData[i].Flag %>
+                        </td>
+                    </tr>
+                    <% } }else{ %>
+                        <tr>
+                            <td colspan="13">No data ever existed.</td>
+                        </tr>
+                        <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
